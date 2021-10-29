@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary"> 
+    <ion-title>New Customer</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/main/tabs/customer"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid padding>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="floating">Customer Name</ion-label>
+              <ion-input type="text" [(ngModel)]="newCustomer.name" required></ion-input>
+            </ion-item>
+       
+            <ion-item>
+              <ion-label position="floating">Location</ion-label>
+              <ion-input type="text" [(ngModel)]="newCustomer.location" required></ion-input>
+            </ion-item>
+  
+            <ion-item>
+              <ion-label position="floating">Transport Number</ion-label>
+              <ion-input type="text" [(ngModel)]="newCustomer.transportNumber" required></ion-input>
+            </ion-item>
+  
+
+            <ion-button (click)="onAddCustomer()">
+              <ion-icon slot="start" name="add"></ion-icon>
+             Add Customer
+            </ion-button>
+            
+          </ion-card-content>
+         
+        </ion-card>
+  
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

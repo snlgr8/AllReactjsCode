@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+
+    <ion-title>Customer List</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid class ="no-padding">
+  <ion-row>
+    <ion-col>
+      <ion-fab-button (click)="onAddCustomer()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+      <ion-item *ngFor="let cust of customerList" >
+        <ion-label>{{cust.name}}</ion-label>
+      </ion-item>
+    
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

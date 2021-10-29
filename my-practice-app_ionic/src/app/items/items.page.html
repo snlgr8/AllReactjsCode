@@ -1,0 +1,16 @@
+<ion-toolbar  color="primary">
+  <ion-title text-center>Items</ion-title>
+  <ion-buttons slot="primary">
+    <ion-button routerLink="/main/tabs/items/add-item">
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar><ion-content>
+<ion-list>
+  <ion-item *ngFor="let item of items" detail [routerLink]="['/', 'main','tabs','items','edit',item.id]">
+    <ion-label>{{item.name}}</ion-label>
+    <ion-label>{{item.qty}}</ion-label>
+  </ion-item>
+</ion-list>
+
+</ion-content>

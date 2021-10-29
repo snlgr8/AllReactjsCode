@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center> Orders</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button routerLink="/main/tabs/orders/create-order">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row >
+      <ion-col >
+        <ion-list>
+          <ion-item *ngFor="let order of orders">
+            <ion-label>{{order.customer.name}}</ion-label>
+            <ion-label>{{order.itemInfo.name}}</ion-label>
+            <ion-label>{{order.qtyOrdered}}</ion-label>
+
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

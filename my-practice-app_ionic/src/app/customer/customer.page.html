@@ -1,0 +1,27 @@
+<ion-toolbar color="primary">
+  <ion-title text-center>Customers</ion-title>
+  <ion-buttons slot="primary">
+    <ion-button routerLink="/main/tabs/customer/add-customer">
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+  <ion-grid>  
+    
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item  *ngFor="let customer of customers" detail [routerLink]="['/','main','tabs','customer','edit',customer.id]">
+            <ion-label>{{customer.name}}</ion-label>
+            <ion-label>{{customer.location}}</ion-label>
+
+          </ion-item>
+        </ion-list>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
